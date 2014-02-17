@@ -18,6 +18,10 @@ drunkzackkitz currently requires four environment variables to be set, they are 
 
 The corpus is currently just a text file of my past tweets. This should be changed in a upcoming release. If you'd like to change it, just change the contents of `zack.txt`
 
+## Running
+
+`$ /path/to/virtualenv/bin/python run.py`
+
 ## Testing
 
 Uhh.. Nope
