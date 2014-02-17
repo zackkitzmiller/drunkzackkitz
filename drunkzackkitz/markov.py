@@ -5,7 +5,6 @@ class Markov(object):
     def __init__(self, text):
         self.cache = {}
         self.words = text
-        self.word_size = len(self.words)
 
     def triples(self):
         if len(self.words) < 3:
@@ -23,7 +22,7 @@ class Markov(object):
                 self.cache[key] = [w3]
 
     def generate_markov_text(self, size=20):
-        seed = random.randint(0, self.word_size-3)
+        seed = random.randint(0,  len(self.words) - 3)
         seed_word, next_word = self.words[seed], self.words[seed+1]
         w1, w2 = seed_word, next_word
         gen_words = []
