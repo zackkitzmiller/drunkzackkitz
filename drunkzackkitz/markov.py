@@ -21,7 +21,7 @@ class Markov(object):
             else:
                 self.cache[key] = [w3]
 
-    def generate_markov_text(self, size=20):
+    def generate(self, size=20):
         seed = random.randint(0,  len(self.words) - 3)
         seed_word, next_word = self.words[seed], self.words[seed+1]
         w1, w2 = seed_word, next_word
@@ -30,7 +30,7 @@ class Markov(object):
             gen_words.append(w1)
             w1, w2 = w2, random.choice(self.cache[(w1, w2)])
         gen_words.append(w2)
-        return ' '.join(gen_words)
+        return gen_words
 
 
 
