@@ -25,12 +25,18 @@ orange = utils.file_to_words(filename)
 markov = markov.Markov(orange)
 markov.prime_cache()
 
-pairs = markov.generate(size=17)
+def generate():
+    pairs = markov.generate(size=17)
 
-# Strip off the @ replies. Twittar doesn't like that
-txt = ' '.join(pairs).replace('@', '')
+    # Strip off the @ replies. Twittar doesn't like that
+    txt = ' '.join(pairs).replace('@', '')
 
 logging.info(txt)
 logging.info(len(txt))
 
-t.statuses.update(status=txt)
+txt = generate()
+try:
+    t.statuses.update(status=txt)
+except:
+    txt = generate()
+    t.statuses.update(status=txt)
