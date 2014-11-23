@@ -19,7 +19,7 @@ if not OAUTH_TOKEN or not OAUTH_SECRET or not CONSUMER_KEY or not CONSUMER_SECRE
 
 t = Twitter(auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
 
-filename = "drunkzackkitz/scripts/zack.txt"
+filename = "drunkzackkitz/scripts/zack_clean.txt"
 orange = utils.file_to_words(filename)
 
 markov = markov.Markov(orange)
