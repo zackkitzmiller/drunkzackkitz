@@ -32,5 +32,5 @@ Uhh. Sure
 
 ## License
 
-Which ever is the most flexible one. MIT, maybe? Someone PR this.
+Public domain.
 
